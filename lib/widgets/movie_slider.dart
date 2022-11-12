@@ -5,7 +5,7 @@ class MovieSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 260,
       child: Column(
@@ -23,14 +23,14 @@ class MovieSlider extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Expanded(
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 20,
-                itemBuilder: (_, int index) => _MoviePoster()),
+                itemBuilder: (_, int index) => const _MoviePoster()),
           ),
         ],
       ),
@@ -56,7 +56,7 @@ class _MoviePoster extends StatelessWidget {
                 arguments: 'movie-instance'),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: FadeInImage(
+              child: const FadeInImage(
                 placeholder: AssetImage('assets/no-imagejpg'),
                 image: NetworkImage('https://via.placeholder.com/300x400'),
                 width: 130,
@@ -65,10 +65,10 @@ class _MoviePoster extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Text(
+          const Text(
             'StarWars the return of the Jedi of the far away planet',
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
