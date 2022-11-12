@@ -57,19 +57,19 @@ class _PosterAndTitle extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
 
     return Container(
-      margin: EdgeInsets.only(top: 20),
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: FadeInImage(
+            child: const FadeInImage(
               placeholder: AssetImage('assets/no-image.jpg'),
               image: NetworkImage('https://via.placeholder.com/200x300'),
               height: 150,
             ),
           ),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -92,7 +92,7 @@ class _PosterAndTitle extends StatelessWidget {
                     size: 15,
                     color: Colors.yellow.shade900,
                   ),
-                  SizedBox(width: 5),
+                  const SizedBox(width: 5),
                   Text('movie.voteAverage', style: textTheme.caption)
                 ],
               )
