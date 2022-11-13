@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
-import '../models/movie.dart';
+import '../models/models.dart';
 
 class CardSwiper extends StatelessWidget {
   final List<Movie> movies;
