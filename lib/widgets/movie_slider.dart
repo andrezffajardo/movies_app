@@ -42,7 +42,7 @@ class _MovieSliderState extends State<MovieSlider> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 260,
+      height: 290,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -54,7 +54,7 @@ class _MovieSliderState extends State<MovieSlider> {
               child: Text(
                 this.widget.title!,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -97,7 +97,7 @@ class _MoviePoster extends StatelessWidget {
                 placeholder: AssetImage('assets/no-image.jpg'),
                 image: NetworkImage(movie.fullPosterImg),
                 width: 130,
-                height: 190,
+                height: 180,
                 fit: BoxFit.cover,
               ),
             ),
@@ -110,6 +110,10 @@ class _MoviePoster extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),
